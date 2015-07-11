@@ -13,6 +13,9 @@
 namespace coolTypes
 {
 
+/**
+ * Class to behave as a callback for any function of any signature
+ */
 template <typename T, typename R = void, typename... Args>
 class Callback : public CallbackInterface<R, Args...>
 {

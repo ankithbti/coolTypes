@@ -11,7 +11,7 @@ ARCH = $(shell uname -m)	# ARCH becomes the output from the uname -m command.
 CXX=/usr/bin/g++
 CXXFLAGS=-fPIC -g -O2 -Wall $(INCS) -arch $(ARCH) -std=c++0x
 
-SRCS = CallbackInterface.cpp Callback.cpp
+SRCS = CallbackInterface.cpp Callback.cpp CallbackHelper.cpp
 
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 MAIN_OBJ = $(patsubst %.cpp, %.o, $(MAIN_SRC))

@@ -19,15 +19,15 @@ class CallbackInterface : private boost::noncopyable
 {
 public:
     typedef boost::shared_ptr<CallbackInterface> SmartPtr;
-    typedef boost::shared_ptr<const CallbackInterface> ConstSmartPtr;
-    
-    
-    virtual R operator()(Args...) = 0 ;
-        
-    virtual ~CallbackInterface(){
-        
+    typedef boost::shared_ptr<const CallbackInterface> SmartConstPtr;
+
+    virtual R operator()(Args...) = 0;
+
+    virtual ~CallbackInterface()
+    {
+
     }
-    
+
 };
 }
 #endif	/* CALLBACKINTERFACE_HPP */
